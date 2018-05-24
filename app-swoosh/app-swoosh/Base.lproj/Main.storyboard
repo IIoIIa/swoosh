@@ -16,10 +16,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--WelcomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CdQ-oe-jbf"/>
                         <viewControllerLayoutGuide type="bottom" id="JLk-nz-Tzx"/>
@@ -93,19 +93,15 @@
                             <constraint firstItem="pjH-14-Gw2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="w7z-Et-WJ1"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="bgimg" destination="MAk-wM-XHP" id="AV8-LC-f6K"/>
-                        <outlet property="swoosh" destination="pjH-14-Gw2" id="IXw-RR-SYb"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="77.599999999999994" y="32.833583208395808"/>
         </scene>
-        <!--View Controller-->
+        <!--LeagueVC-->
         <scene sceneID="Lye-9g-n9j">
             <objects>
-                <viewController id="5FC-E4-YtX" sceneMemberID="viewController">
+                <viewController id="5FC-E4-YtX" customClass="LeagueVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Sse-qN-FXk"/>
                         <viewControllerLayoutGuide type="bottom" id="PBZ-RH-cbj"/>
@@ -184,6 +180,9 @@
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onNextTapped:" destination="5FC-E4-YtX" eventType="touchUpInside" id="wSs-Dq-RL2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bg1-ug-N9Y">
                                 <rect key="frame" x="16" y="40" width="35" height="30"/>
@@ -218,16 +217,19 @@
                             <constraint firstItem="7Ly-77-tga" firstAttribute="leading" secondItem="cDc-dW-8BM" secondAttribute="leadingMargin" id="w56-YC-L4U"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="gPz-rh-f3G" kind="show" identifier="skillVCSegue" id="jnC-bK-7JP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M9M-4a-gGw" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Qta-Vi-B3F" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="824.79999999999995" y="32.833583208395808"/>
         </scene>
-        <!--View Controller-->
+        <!--SkillVC-->
         <scene sceneID="F4c-0L-eg9">
             <objects>
-                <viewController id="gPz-rh-f3G" sceneMemberID="viewController">
+                <viewController id="gPz-rh-f3G" customClass="SkillVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cJl-nk-rT3"/>
                         <viewControllerLayoutGuide type="bottom" id="Wop-tG-94e"/>
