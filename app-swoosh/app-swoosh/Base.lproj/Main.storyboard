@@ -144,6 +144,9 @@
                                         <state key="normal" title="Mens">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onMensTapped:" destination="5FC-E4-YtX" eventType="touchUpInside" id="3St-i1-agY"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ano-Ky-YGH" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="70" width="343" height="50"/>
@@ -155,6 +158,9 @@
                                         <state key="normal" title="Girls">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onWomensTapped:" destination="5FC-E4-YtX" eventType="touchUpInside" id="2bz-c9-7hy"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V0h-mq-DCt" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="140" width="343" height="50"/>
@@ -166,10 +172,13 @@
                                         <state key="normal" title="Co-ed">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onCoedTapped:" destination="5FC-E4-YtX" eventType="touchUpInside" id="aKM-Ho-1AQ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ly-77-tga" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ly-77-tga" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                 <rect key="frame" x="16" y="597" width="343" height="50"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 <constraints>
@@ -218,6 +227,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="nextBtn" destination="7Ly-77-tga" id="LvQ-jq-jE2"/>
                         <segue destination="gPz-rh-f3G" kind="show" identifier="skillVCSegue" id="jnC-bK-7JP"/>
                     </connections>
                 </viewController>
